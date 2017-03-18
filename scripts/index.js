@@ -34,6 +34,9 @@ clearCompleted.onclick = function() {
             todosList.removeChild(li);
         }
     });
+    todos = todos.filter(function(el1){
+        return todos.isDone == false;
+    });
 }
 
 markAllCompleted.onclick = function() {

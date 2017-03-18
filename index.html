@@ -13,16 +13,16 @@
 
 <body>
     <div class="container">
-        <button id="markAllCompleted">O</button> <input type="text" id="todoText" />
+        <button id="markAllCompleted"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button> <input type="text" id="todoText" />
 
         <ul id="todoList"></ul>
 
-        <div>
+        <div class = "bottom_menu">
             <span>Todos left: <span id="todosLeft"></span></span>
-
-            <button class="btn_menu" id="showAll">All</button><button class="btn_menu" id="showActive">Active</button><button class="btn_menu" id="showCompleted">Completed</button>
-
             <button id="clearCompleted">Clear completed</button>
+            <div class = "center_block_button">
+            <button class="btn_menu" id="showAll">All</button><button class="btn_menu" id="showActive">Active</button><button class="btn_menu" id="showCompleted">Completed</button>
+            </div>
         </div>
 
         <div style="display: none;">
