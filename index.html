@@ -13,24 +13,35 @@
 
 <body>
     <div class="container">
-        <button id="markAllCompleted"><i class="fa fa-angle-double-down" aria-hidden="true"></i></button> <input type="text" id="todoText" />
 
-        <ul id="todoList"></ul>
+        <div class="title-site">todos</div>
+        <div class="wparrer">
+            <div class="wrapper-shadow">
+                <button id="markAllCompleted"><i class="fa fa-angle-down" aria-hidden="true"></i></button> <input type="text" placeholder="What needs to be done?" id="todoText" />
 
-        <div class = "bottom_menu">
-            <span>Todos left: <span id="todosLeft"></span></span>
-            <button id="clearCompleted">Clear completed</button>
-            <div class = "center_block_button">
-            <button class="btn_menu" id="showAll">All</button><button class="btn_menu" id="showActive">Active</button><button class="btn_menu" id="showCompleted">Completed</button>
+                <ul id="todoList"></ul>
+
+                <div class = "bottom_menu" id = "bottom_menu">
+                    <span>Todos left: <span id="todosLeft"></span></span>
+                    <button id="clearCompleted">Clear completed</button>
+                    <div class = "center_block_button">
+                    <button class="btn_menu" id="showAll">All</button>
+                    <button class="btn_menu" id="showActive">Active</button>
+                    <button class="btn_menu" id="showCompleted">Completed</button>
+                    </div>
+                </div>
+
+                <div id = "hollow" style="display: none;">
+                    <li><input type="checkbox"> <span>Todo text</span> <button>x</button></li>
+                </div>
             </div>
         </div>
-
-        <div style="display: none;">
-            <li><input type="checkbox"> <span>Todo text</span> <button>x</button></li>
-        </div>
     </div>
-
-    <script src="./scripts/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="./scripts/model.js"></script>
+    <script src="./scripts/view.js"></script>
+    <script src="./scripts/controller.js"></script>
+    <!-- <script src="./scripts/index.js"></script> -->
 </body>
 
 </html>
