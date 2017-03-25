@@ -1,5 +1,6 @@
 *{
 	outline: none;
+	font-size: 18px;
 }
 ul {
     list-style: none;
@@ -21,15 +22,15 @@ button:hover{
 	border-right: none;
 	padding: 5px 15px;
 }
-#showActive{
+/*#showActive{
 	border-radius: 0;
-}
-#showAll{
+}*/
+/*#showAll{
 	border-radius: 4px 0 0 4px;
-}
+}*/
 #showCompleted{
-	border-right: 1px solid #ddd;
-	border-radius: 0 4px 4px 0;
+/*	border-right: 1px solid #ddd;
+	border-radius: 0 4px 4px 0;*/
 }
 #clearCompleted{
 	padding: 5px 15px;
@@ -37,7 +38,8 @@ button:hover{
 }
 #todoText{
 	padding: 5px 15px;
-	border: 1px solid #ddd;
+	/*border: 1px solid #ddd;*/
+	border:none;
 	border-radius: 4px;
 }
 #markAllCompleted{
@@ -53,6 +55,13 @@ button:hover{
 	float: right;
 	display: none;
 	color:red;
+	border:none;
+	opacity: 0.4;
+	font-size: 18px;
+}
+#todoList button:hover{
+	opacity: 1;
+	background: none;
 }
 #todoList li:hover{
 	cursor: pointer;
@@ -64,12 +73,13 @@ button:hover{
 	padding-top: 25px;
 }
 #todoList li{
-	padding: 10px;
-	border: 1px solid #ddd;
-	border-bottom: none;
+	padding: 15px 25px;
+	border-bottom: 1px solid #ddd;
+
+	/*border-bottom: none;*/
 }
-#todoList li:first-child{
-/*	border-radius: 4px 4px;*/
+/*#todoList li:first-child{
+
 	border-top-right-radius: 4px;
 	border-top-left-radius:4px;
 }
@@ -77,7 +87,7 @@ button:hover{
 		border-bottom-right-radius: 4px;
 	border-bottom-left-radius:4px;
 	border-bottom: 1px solid #ddd;
-}
+}*/
 .bottom_menu > span{
 	float:left;
 }
@@ -89,6 +99,126 @@ button:hover{
 	margin: 0 auto;
 }
 input#todoText {
-    width: 87%;
+    width: 94%;
     float: right;
 }
+
+/*-------------------------------*/
+body{
+	background:#f5f5f5;
+}
+.title-site{
+	color:#ead7d7;
+	text-align: center;
+	font-size: 72px;
+}
+.wparrer{
+	background: #fff;
+	box-shadow:
+	    /* The top layer shadow */
+	    0 1px 1px rgba(0,0,0,0.15),
+	    /* The second layer */
+	    0 10px 0 -5px #eee,
+	    /* The second layer shadow */
+	    0 10px 1px -4px rgba(0,0,0,0.15),
+	     /* The third layer */
+	    0 20px 0 -10px #eee,
+	    /* The third layer shadow */
+	    0 20px 1px -9px rgba(0,0,0,0.15);
+}
+.wrapper-shadow{
+	padding: 30px 0;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+#markAllCompleted{
+	border:none;
+	font-size: 28px;
+	opacity: 0.4;
+	margin-left: 20px;
+}
+#todoText{
+	font-size: 27px;
+	font-style: italic;
+}
+#markAllCompleted:hover{
+	background: none;
+}
+#bottom_menu{
+	padding: 0 25px;
+}
+.button-bottom{
+	border:none;
+	border:1px solid transparent;
+	margin-left:5px;
+}
+.button-bottom:hover,.btn-b:hover{
+	border:1px solid #c6c6c6;
+	background: none;
+}
+.btn-b{
+	border: 1px solid #c6c6c6;
+	margin-left: 5px;
+	box-sizing: border-box;
+}
+#markAllCompleted.full{
+	opacity: 1;
+}
+#clearCompleted{
+	opacity: 0;
+}
+#clearCompleted.show{
+	opacity: 1;
+}
+input[type=checkbox]{
+	margin-right: 15px;
+}
+input[type=checkbox]:before{
+	content:' ';
+	display: block;
+	width: 25px;
+	margin-top: -5px;
+	margin-left: -3px;
+	background: #fff;
+	height: 25px;
+	border: 1px solid #c6c6c6;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 5px;
+}
+input[type=checkbox]:hover:before{
+	cursor: pointer;
+}
+input[type=checkbox]:checked:before{
+	font: normal normal normal 14px/1 FontAwesome;
+	content: "\f00c";
+}
+
+
+@media screen and (max-width : 321px) {
+	.center_block_button{
+		overflow: hidden;
+		clear: both;
+		
+	}
+	#clearCompleted{
+		overflow: hidden;
+		display: table !important;
+		margin:15px auto !important;
+		float: none;
+		clear: both;
+		margin:0;
+		padding: 0;
+	}
+	.bottom_menu > span {
+		float: none;
+	}
+	input#todoText {
+	    width: 80%;
+	    float: right;
+	}
+	#todoText {
+	    font-size: 21px;
+	    font-style: italic;
+	}
+}
+
